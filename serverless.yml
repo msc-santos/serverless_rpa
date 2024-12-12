@@ -1,0 +1,28 @@
+service: serverlessrpa
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: local
+  region: us-east-1
+
+functions:
+  api:
+    handler: src/main.handler
+    events:
+      - httpApi:
+          path: /rpa
+          method: post
+
+plugins:
+  - serverless-localstack
+  - serverless-offline
+
+custom:
+  stage: local
+  localstack:
+    endpointFile: "localstack.endpoints.json"
+    debug: true
+    stages:
+      - local

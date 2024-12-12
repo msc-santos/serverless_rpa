@@ -1,0 +1,24 @@
+{
+  "localstack": {
+    "S3": {
+      "address": "http://localhost:4566",
+      "region": "us-east-1"
+    },
+    "DynamoDB": {
+      "address": "http://localhost:4566",
+      "region": "us-east-1"
+    },
+    "Lambda": {
+      "address": "http://localhost:4566",
+      "region": "us-east-1"
+    },
+    "SNS": {
+      "address": "http://localhost:4566",
+      "region": "us-east-1"
+    },
+    "SQS": {
+      "address": "http://localhost:4566",
+      "region": "us-east-1"
+    }
+  }
+}
